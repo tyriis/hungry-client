@@ -3,7 +3,8 @@ require.config({
         'angular': 'lib/angular/angular',
         'jquery': 'lib/jquery/jquery',
         'bootstrap' :  'lib/bootstrap/js/bootstrap.amd',
-        'lodash' : 'lib/lodash/lodash'
+        'lodash' : 'lib/lodash/lodash',
+        'angular-de' : 'lib/angular/angular-locale_de-de'
     },
     map: {
         '*': {
@@ -23,12 +24,8 @@ require.config({
     }
 });
 
-define('main', ['angular', 'jquery', 'lodash', 'bootstrap', 'app/main'], function (ng, $, _, bs) {
+define('main', ['angular', 'angular-de', 'app/main'], function (ng, locale) {
     'use strict';
-    console.log('Require version ' + requirejs.version);
-    console.log('Angular version: ' + ng.version.full);
-    console.log('jQuery version: ' + $.fn.jquery);
-    console.log('Bootstrap version: ' +  bs.version);
-    console.log('Lodash version: ' + _.VERSION);
+    ng.module("ngLocale", [], ["$provide", locale]);
     ng.bootstrap(document, ['app']);
 });
