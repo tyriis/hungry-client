@@ -44,16 +44,9 @@
             <div class="col-md-2 text-center">{{ day | date : fullDate}}</div>
             <div class="col-md-10">-</div>
         </div>
-        <button class="bg-info" ng-click="next()">-></button>
-        <!--<div ng-controller="ContactController">
-            <label for="email">Email:</label>
-            <input id="email" type="text" ng-model="contact"/>
-            <button ng-click="add()">Add</button>
-            <h2>Contacts</h2>
-            <ul>
-                <li ng-repeat="contact in contacts"> {{ contact }} </li>
-            </ul>
-        </div>-->
+        <button class="bg-info" ng-click="prev()">prev</button>
+        <button class="bg-info" ng-click="current()">current</button>
+        <button class="bg-info" ng-click="next()">next</button>
     </div>
     <script src="js/lib/requirejs/require.js" data-main="js/main.js"></script>
     <!--<script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>-->
