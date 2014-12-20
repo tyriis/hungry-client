@@ -1,0 +1,12 @@
+<div class="container" ng-controller="CalendarController">
+    <div class="starter-template">
+        <h1>what do you want to eat tomorrow?</h1>
+    </div>
+    <div class="row" ng-repeat="day in days" ng-class="{'alert-info': isToday(day)}">
+        <div class="col-md-2 text-center">{{ day | date : fullDate}}</div>
+        <div class="col-md-10">-</div>
+    </div>
+    <button class="btn btn-info" ng-click="prev()">prev</button>
+    <button class="btn btn-info" ng-click="current()">current</button>
+    <button class="btn btn-info" ng-click="next()">next</button>
+</div>

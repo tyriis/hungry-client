@@ -4,7 +4,8 @@ require.config({
         'jquery': 'lib/jquery/jquery',
         'bootstrap' :  'lib/bootstrap/js/bootstrap.amd',
         'lodash' : 'lib/lodash/lodash',
-        'angular-de' : 'lib/angular/angular-locale_de-de'
+        'angular-de' : 'lib/angular/angular-locale_de-de.amd',
+        'angular-route' : 'lib/angular/angular-route.amd'
     },
     map: {
         '*': {
@@ -24,7 +25,7 @@ require.config({
     }
 });
 
-define('main', ['angular', 'angular-de', 'app/main'], function (ng, locale) {
+define('main', ['angular', 'angular-de', 'angular-route', 'app/main'], function (ng, locale) {
     'use strict';
     ng.module("ngLocale", [], ["$provide", locale]);
     ng.bootstrap(document, ['app']);

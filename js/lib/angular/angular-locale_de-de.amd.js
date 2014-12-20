@@ -1,6 +1,6 @@
 /**
  * @source https://code.angularjs.org/1.3.7/i18n/angular-locale_de-de.js
- * modified to work with amd
+ * modified to work with require
  * @modified by https://github.com/tyriis
  */
 define(function() {
