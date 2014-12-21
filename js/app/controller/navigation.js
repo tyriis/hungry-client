@@ -1,8 +1,9 @@
-define('app/controller/navigation', [], function() {
+define('app/controller/navigation', ['app/data'], function(data) {
     'use strict';
     var NavigationController = function($scope, $location) {
-        $scope.isActive = function(route) {
-            return route === $location.path();
+        $scope.items = data.getNavigation();
+        $scope.isActive = function(item) {
+            return item.url === $location.path();
         }
     };
     NavigationController.$inject=['$scope', '$location'];

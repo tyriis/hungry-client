@@ -8,6 +8,22 @@ define('app/data', ['lodash'], function(_) {
                 days.push(day);
             }
             return days;
+        },
+        getNavigation: function() {
+            return [
+                {
+                    name: 'planing',
+                    url: '/planing'
+                },
+                {
+                    name: 'cookbook',
+                    url: '/cookbook'
+                },
+                {
+                    name: 'groceries',
+                    url: '/groceries'
+                }
+            ];
         }
     };
 });

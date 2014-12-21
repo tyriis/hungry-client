@@ -3,23 +3,23 @@ define('app/config', [], function() {
     var config = function($routeProvider) {
         $routeProvider
             .when('/', {
-                templateUrl: 'pages/welcome.html',
+                templateUrl: 'page/welcome.html',
                 controller: 'RouteController'
             })
             .when('/planing', {
-                templateUrl: 'pages/planing.html',
+                templateUrl: 'page/planing.html',
                 controller: 'RouteController'
             })
             .when('/cookbook', {
-                templateUrl: 'pages/cookbook.html',
+                templateUrl: 'page/cookbook.html',
                 controller: 'RouteController'
             })
             .when('/groceries', {
-                templateUrl: 'pages/groceries.html',
+                templateUrl: 'page/groceries.html',
                 controller: 'RouteController'
             })
             .when('/404', {
-                templateUrl: 'pages/404.html',
+                templateUrl: 'page/404.html',
                 controller: 'RouteController'
             })
             .otherwise({
