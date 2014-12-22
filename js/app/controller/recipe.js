@@ -33,7 +33,6 @@ define('app/controller/recipe', ['app/data', 'lodash'], function(data, _) {
         };
         $scope.setRecipe = function(recipe) {
             $scope.recipe = $scope.recipes[recipe];
-            $scope.editIndex = recipe;
         };
         $scope.storeRecipe = function(recipe) {
 
