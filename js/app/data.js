@@ -9,21 +9,80 @@ define('app/data', ['lodash'], function(_) {
             }
             return days;
         },
-        getNavigation: function() {
-            return [
-                {
-                    name: 'planing',
-                    url: '/planing'
+        navigation: [
+            {
+                name: 'planing',
+                url: '/planing'
+            },
+            {
+                name: 'cookbook',
+                url: '/cookbook'
+            },
+            {
+                name: 'groceries',
+                url: '/groceries'
+            }
+        ],
+        groups: [
+            {
+                name: 'meat'
+            },
+            {
+                name: 'cake'
+            },
+            {
+                name: 'soup'
+            }
+        ],
+        recipes: [
+            {
+                "title": "Onion Soup",
+                "info": {
+                    "blurb": "blabla",
+                    "author": "user24",
+                    "yield": "8 Servings"
                 },
-                {
-                    name: 'cookbook',
-                    url: '/cookbook'
+                "indregients": [
+                    {
+                        "quantity": 1,
+                        "unit": "deca",
+                        "item": "butter or oil"
+                    },
+                    {
+                        "quantity": 1,
+                        "unit": "cloves",
+                        "item": "garlic"
+                    }
+                ],
+                "preparation": "this is how you can make this delicious bla bla....",
+                "serving": "some more instructions for the serving",
+                "notes": "and here the notes",
+                "groups": ["soup"]
+            },
+            {
+                "title": "Apple pie",
+                "info": {
+                    "blurb": "blabla",
+                    "author": "user24",
+                    "yield": "8 Servings"
                 },
-                {
-                    name: 'groceries',
-                    url: '/groceries'
-                }
-            ];
-        }
+                "indregients": [
+                    {
+                        "quantity": 1,
+                        "unit": "deca",
+                        "item": "butter or oil"
+                    },
+                    {
+                        "quantity": 1,
+                        "unit": "cloves",
+                        "item": "garlic"
+                    }
+                ],
+                "preparation": "this is how you can make this delicious bla bla....",
+                "serving": "some more instructions for the serving",
+                "notes": "and here the notes",
+                "groups": ["cake", "dessert"]
+            }
+        ]
     };
 });

@@ -1,5 +1,23 @@
-<div class="container">
+<div class="container" ng-controller="RecipeController">
     <div class="starter-template">
         <h1>and the secret ingredient is...</h1>
+    </div>
+    <ul class="nav nav-pills">
+        <li role="presentation" ng-repeat="group in groups">
+            <a href="" ng-click="filterByGroup(group)">{{ group.name }}<span class="badge">{{ numRecipes(group) }}</span></a>
+        </li>
+    </ul>
+    <label for="group">Name:</label>
+    <input id="group" type="text" ng-model="group"/>
+    <button ng-click="addGroup()">+</button>
+    <div class="list-group">
+        <a href="" class="list-group-item" ng-repeat="recipe in recipes" ng-show="isVisible(recipe)" ng-click="setRecipe($index)">
+            <h4 class="list-group-item-heading">{{recipe.title}}</h4>
+            {{recipe.info.blurb}}</p>
+        </a>
+    </div>
+    <div ng-show="recipe">
+        <label for="recipeTitle">Title:</label>
+        <input id="recipeTitle" type="text" ng-model="recipe.title"/>
     </div>
 </div>

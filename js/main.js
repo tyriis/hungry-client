@@ -1,18 +1,22 @@
 require.config({
     paths: {
         'angular': 'lib/angular/angular',
+        'angular-de' : 'lib/angular/angular-locale_de-de.amd',
+        'angular-route' : 'lib/angular/angular-route.amd',
         'jquery': 'lib/jquery/jquery',
         'bootstrap' :  'lib/bootstrap/js/bootstrap.amd',
-        'lodash' : 'lib/lodash/lodash',
-        'angular-de' : 'lib/angular/angular-locale_de-de.amd',
-        'angular-route' : 'lib/angular/angular-route.amd'
+        'lodash' : 'lib/lodash/lodash'
     },
     map: {
         '*': {
-            'jquery': 'lib/jquery/jquery.amd.private'
+            'jquery': 'lib/jquery/jquery.amd.private',
+            'lodash': 'lib/lodash/lodash.amd.private'
         },
         'lib/jquery/jquery.amd.private': {
             'jquery': 'jquery'
+        },
+        'lib/lodash/lodash.amd.private': {
+            'lodash': 'lodash'
         }
     },
     shim: {
@@ -21,6 +25,9 @@ require.config({
         },
         'jquery': {
             exports: 'jQuery'
+        },
+        'lodash': {
+            exports: '_'
         }
     }
 });
